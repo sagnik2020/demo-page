@@ -1,0 +1,584 @@
+/* ==========================================================
+   HHHSAA HOME PAGE
+   Requires hhsa-base.css
+========================================================== */
+
+
+/* ==========================================================
+   HOME HERO
+========================================================== */
+
+.hhsa-hero {
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hhsa-hero__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(9, 29, 51, 0.58),
+            rgba(9, 29, 51, 0.68)
+        );
+}
+
+.hhsa-hero__content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 820px;
+
+    padding-block: 70px;
+
+    text-align: center;
+}
+
+.hhsa-hero__text {
+    max-width: 720px;
+
+    margin:
+        0
+        auto
+        30px;
+
+    color: rgba(255, 255, 255, 0.84);
+
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+
+/* ==========================================================
+   HOME STATISTICS
+========================================================== */
+
+.hhsa-stats {
+    background: var(--hhsa-soft);
+}
+
+.hhsa-stats__grid {
+    max-width: 690px;
+    min-height: 92px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.hhsa-stat {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+.hhsa-stat__icon {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    flex: 0 0 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--hhsa-radius-round);
+
+    background: var(--hhsa-surface);
+
+    color: var(--hhsa-primary);
+}
+
+.hhsa-stat__icon .lucide {
+    width: 20px;
+    height: 20px;
+}
+
+.hhsa-stat__number {
+    display: block;
+
+    color: var(--hhsa-primary);
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hhsa-stat__label {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--hhsa-muted);
+
+    font-size: 0.68rem;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   HOME ABOUT
+========================================================== */
+
+.hhsa-about {
+    background: var(--hhsa-surface);
+}
+
+.hhsa-about__grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 76px;
+}
+
+.hhsa-about__media {
+    position: relative;
+}
+
+.hhsa-about__image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1.22 / 1;
+
+    object-fit: cover;
+
+    border-radius: var(--hhsa-radius);
+
+    box-shadow: var(--hhsa-shadow);
+}
+
+.hhsa-about__content {
+    max-width: 520px;
+}
+
+
+/* ==========================================================
+   HOME UPCOMING EVENTS
+========================================================== */
+
+.hhsa-events {
+    background: var(--hhsa-secondary);
+}
+
+.hhsa-events .hhsa-link--accent:hover {
+    color: var(--hhsa-white);
+}
+
+.hhsa-event-card {
+    overflow: hidden;
+
+    background: var(--hhsa-primary);
+
+    border-radius: var(--hhsa-radius);
+
+    box-shadow: var(--hhsa-shadow);
+
+    transition:
+        transform var(--hhsa-transition),
+        box-shadow var(--hhsa-transition);
+}
+
+.hhsa-event-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--hhsa-shadow-lg);
+}
+
+.hhsa-event-card__image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8.7;
+
+    object-fit: cover;
+}
+
+.hhsa-event-card__body {
+    padding: 26px;
+}
+
+.hhsa-event-card__meta {
+    display: grid;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+.hhsa-event-card__meta span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.hhsa-event-card__meta .lucide {
+    width: 15px;
+    height: 15px;
+
+    color: var(--hhsa-accent);
+}
+
+
+/* ==========================================================
+   HOME INITIATIVES
+========================================================== */
+
+.hhsa-initiatives {
+    background: var(--hhsa-bg);
+}
+
+
+/*
+   Home-only initiative cards.
+
+   Inner Initiative listing MUST NOT use this.
+   Use:
+   .hhsa-list-card.hhsa-list-card--initiative
+*/
+
+.hhsa-initiative-card {
+    min-height: 355px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 38px 32px 32px;
+
+    text-align: center;
+}
+
+.hhsa-initiative-card .hhsa-copy {
+    flex: 1;
+}
+
+
+/* Feature icons */
+
+.hhsa-feature-icon {
+    width: 58px;
+    height: 58px;
+
+    display: inline-flex;
+    flex: 0 0 58px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: var(--hhsa-radius);
+}
+
+.hhsa-feature-icon .lucide {
+    width: 25px;
+    height: 25px;
+}
+
+.hhsa-feature-icon--gold {
+    background: #FBF7EB;
+
+    color: var(--hhsa-accent);
+}
+
+.hhsa-feature-icon--blue {
+    background: var(--hhsa-soft);
+
+    color: var(--hhsa-primary);
+}
+
+.hhsa-feature-icon--green {
+    background: #F0FDF4;
+
+    color: var(--hhsa-success);
+}
+
+
+/* ==========================================================
+   HOME GALLERY
+========================================================== */
+
+.hhsa-gallery {
+    background: var(--hhsa-surface);
+}
+
+.hhsa-gallery__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.hhsa-gallery__item {
+    display: block;
+
+    overflow: hidden;
+
+    border-radius: var(--hhsa-radius);
+
+    background: var(--hhsa-soft);
+}
+
+.hhsa-gallery__item img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1.07 / 1;
+
+    object-fit: cover;
+
+    transition: transform 350ms ease;
+}
+
+.hhsa-gallery__item:hover img {
+    transform: scale(1.035);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1080px) {
+
+    .hhsa-about__grid {
+        gap: 48px;
+    }
+
+    .hhsa-gallery__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    /* Hero */
+
+    .hhsa-hero {
+        min-height: 500px;
+    }
+
+    .hhsa-hero__content {
+        padding-block: 60px;
+    }
+
+    .hhsa-display {
+        font-size:
+            clamp(2rem, 9vw, 2.7rem);
+    }
+
+    .hhsa-display span {
+        font-size: 0.56em;
+    }
+
+    .hhsa-hero__text {
+        font-size: 0.94rem;
+    }
+
+
+    /* Stats */
+
+    .hhsa-stats__grid {
+        min-height: 96px;
+
+        gap: 16px;
+    }
+
+    .hhsa-stat {
+        gap: 10px;
+    }
+
+    .hhsa-stat__icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+    .hhsa-stat__number {
+        font-size: 1.25rem;
+    }
+
+    .hhsa-stat__label {
+        font-size: 0.58rem;
+    }
+
+
+    /* About */
+
+    .hhsa-about__grid {
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+    }
+
+    .hhsa-about__content {
+        max-width: none;
+    }
+
+
+    /* Initiative cards */
+
+    .hhsa-initiative-card {
+        min-height: 0;
+    }
+
+
+    /* Gallery */
+
+    .hhsa-gallery__grid {
+        gap: 12px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 430px) {
+
+    .hhsa-stats__grid {
+        gap: 8px;
+    }
+
+    .hhsa-stat__icon {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .hhsa-stat__number {
+        font-size: 1.08rem;
+    }
+
+
+    .hhsa-gallery__grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hhsa-event-card,
+    .hhsa-gallery__item img {
+        transition: none;
+    }
+
+}
+
+/* Event */
+
+
+/* =====================================================
+   HOMEPAGE EVENT BANNER
+===================================================== */
+
+.hhsa-event-card__media {
+	display: block;
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	background: #e6ecf3;
+	text-decoration: none;
+}
+
+.hhsa-event-card__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.3s ease;
+}
+
+.hhsa-event-card__media:hover img {
+	transform: scale(1.04);
+}
+
+.hhsa-event-card__placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	min-height: 160px;
+	background: linear-gradient(135deg, #002d5e, #1d2c4e);
+	color: #d4af37;
+}
+
+.hhsa-event-card__placeholder svg {
+	width: 52px;
+	height: 52px;
+	stroke-width: 1.5;
+}
+
+.hhsa-event-card__body {
+	min-width: 0;
+}
+
+@media (max-width: 767px) {
+	.hhsa-event-card__media {
+		aspect-ratio: 16 / 9;
+	}
+}
